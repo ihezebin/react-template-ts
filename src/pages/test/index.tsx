@@ -10,15 +10,8 @@ const Test = () => {
     const {user, setUser, clearUser} = useStore()
 
     useEffect(() => {
-
-        api.get('http://localhost:8080/hello').then(res => {
-            console.log('resp', res)
-        }).catch(err => {
-            console.log('err', err)
-        })
-
         setUser({
-            username: 'test',
+            username: 'test_username',
             id: "123"
         })
 
@@ -32,7 +25,19 @@ const Test = () => {
         <div>
             <div>hello {user?.username}</div>
             <div>
-                change user info: <Button onClick={()=>setUser({username:"new_username"})}>click</Button>
+                change user info: <Button onClick={() => setUser({username: "new_username"})}>click</Button>
+            </div>
+            <div>
+                api request: <Button onClick={() => {
+                api.get('http://localhost:8080/hello').then(res => {
+                    console.log('resp', res)
+                }).catch(err => {
+                    console.log('err', err)
+                })
+            }}>click</Button>
+            </div>
+            <div>
+                使用环境变量：{process.env.REACT_APP_DOMAIN}
             </div>
         </div>
     );
