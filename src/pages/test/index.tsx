@@ -3,6 +3,7 @@ import useStore from "../../store";
 import api from '../../api'
 import {useLocation, useParams} from "react-router-dom";
 import {Button} from "antd";
+import style from './index.module.scss';
 
 
 const Test = () => {
@@ -55,7 +56,7 @@ const TestSub = () => {
 
     console.log('search', paramsObject)
 
-    return <div>
+    return <div className={style.test}>
         <p>i am a test sub component, get id from path: {id}</p>
         <p>search param: {JSON.stringify(paramsObject)}</p>
     </div>

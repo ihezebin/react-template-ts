@@ -15,7 +15,7 @@ const authRoute = (element: JSX.Element) => {
 const routers = [
     {path: '/test', element: <Test/>},
     {path: '/', element: <App/>, children: [
-            {index: true, element:<Navigate to={'sub/test_id'}/>},
+            {index: true, element:<Navigate to={'sub/test_id?name=korbin'}/>},
             {path: '/sub/:id', element: <TestSub/>},
             {path: '/need_auth', element: authRoute(<Test/>)},
         ]
