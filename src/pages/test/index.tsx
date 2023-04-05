@@ -1,9 +1,11 @@
 import React, {useEffect} from 'react';
 import useStore from "../../store";
 import api from '../../api'
+import {useLocation, useParams} from "react-router-dom";
+import {Button} from "antd";
 
 
-const Test = ()=> {
+const Test = () => {
 
     const {user, setUser, clearUser} = useStore()
 
@@ -16,7 +18,8 @@ const Test = ()=> {
         })
 
         setUser({
-            username: 'test'
+            username: 'test',
+            id: "123"
         })
 
         return () => {
@@ -26,10 +29,31 @@ const Test = ()=> {
 
 
     return (
-        <div className="App">
-            hello {user?.username}
+        <div>
+            <div>hello {user?.username}</div>
+            <div>
+                change user info: <Button onClick={()=>setUser({username:"new_username"})}>click</Button>
+            </div>
         </div>
     );
 }
 
-export default Test;
+const TestSub = () => {
+    const {id} = useParams();
+    const location = useLocation();
+    const searchParams = new URLSearchParams(location.search);
+    // const name = searchParams.get('name');
+    const paramsObject: { [key: string]: string } = {};
+    for (const [key, value] of searchParams.entries()) {
+        paramsObject[key] = value;
+    }
+
+    console.log('search', paramsObject)
+
+    return <div>
+        <p>i am a test sub component, get id from path: {id}</p>
+        <p>search param: {JSON.stringify(paramsObject)}</p>
+    </div>
+}
+
+export {Test, TestSub};
