@@ -2,8 +2,8 @@ import React from "react";
 import {useRoutes, Navigate} from "react-router-dom";
 import {Test, TestSub} from "../pages/test";
 import App from "../pages";
-import Unauthorized from "../pages/errors/401";
-import NotFound from "../pages/errors/404";
+import Forbidden from "../pages/errors/forbidden";
+import Nothing from "../pages/errors/nothing";
 
 //  authRoute 检查认证状态，如果已认证则返回原页面组件，否则返回做无权限处理
 const authRoute = (element: JSX.Element) => {
@@ -20,8 +20,8 @@ const routers = [
             {path: '/need_auth', element: authRoute(<Test/>)},
         ]
     },
-    {path: '/forbidden', element: <Unauthorized/>},
-    {path: '*', element: <NotFound/>},
+    {path: '/forbidden', element: <Forbidden/>},
+    {path: '*', element: <Nothing/>},
 ]
 
 const Router = () => useRoutes(routers)
