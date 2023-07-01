@@ -23,6 +23,7 @@
     "zustand": "^4.3.7"
   },
   "scripts": {
+    "go": "react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
