@@ -40,18 +40,7 @@
   resolved "https://registry.npmmirror.com/@ant-design/icons-svg/-/icons-svg-4.2.1.tgz#8630da8eb4471a4aabdaed7d1ff6a97dcb2cf05a"
   integrity sha512-EB0iwlKDGpG93hW8f85CTJTs4SvMX7tt5ceupvhALp1IF44SeUFOMhKUOYqpsoYWQKAOuTRDMqn75rEaKDp0Xw==
 
-"@ant-design/icons@^5.0.0":
-  version "5.0.1"
-  resolved "https://registry.npmmirror.com/@ant-design/icons/-/icons-5.0.1.tgz#febb1fdc5776f58187b2c953ac9a4496069d045b"
-  integrity sha512-ZyF4ksXCcdtwA/1PLlnFLcF/q8/MhwxXhKHh4oCHDA4Ip+ZzAHoICtyp4wZWfiCVDP0yuz3HsjyvuldHFb3wjA==
-  dependencies:
-    "@ant-design/colors" "^7.0.0"
-    "@ant-design/icons-svg" "^4.2.1"
-    "@babel/runtime" "^7.11.2"
-    classnames "^2.2.6"
-    rc-util "^5.9.4"
-
-"@ant-design/icons@^5.0.1":
+"@ant-design/icons@^5.0.0", "@ant-design/icons@^5.0.1":
   version "5.0.1"
   resolved "https://registry.npmjs.org/@ant-design/icons/-/icons-5.0.1.tgz#febb1fdc5776f58187b2c953ac9a4496069d045b"
   integrity sha512-ZyF4ksXCcdtwA/1PLlnFLcF/q8/MhwxXhKHh4oCHDA4Ip+ZzAHoICtyp4wZWfiCVDP0yuz3HsjyvuldHFb3wjA==
@@ -1319,21 +1308,24 @@
   resolved "https://registry.npmmirror.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@ihezebin/common@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.npmmirror.com/@ihezebin/common/-/common-1.0.4.tgz#39972af5db78847cdc4b3bd30893776dde62c830"
-  integrity sha512-DE2E6kw4oF2g8267wWeOTOfSloEk0RnkuY3SLrvO0dLIThRHE7cEd9EuSuQvYyk52K3yjFkbuoZ1ET3AvTwreA==
+"@ihezebin/common@^1.1.4":
+  version "1.1.4"
+  resolved "https://registry.npmjs.org/@ihezebin/common/-/common-1.1.4.tgz#c580ea566ae1c59362d257ffbfe874390dfb73d0"
+  integrity sha512-DdIilarrD8BP6V3lwkzjRgU5LjO4iuutcWNDtFsmPpjrzQ7OnDdLLny8DYD3MWbMv7AeO6RzbBqpsSvylREizQ==
   dependencies:
+    "@ant-design/icons" "^5.0.1"
     "@testing-library/jest-dom" "^5.16.5"
     "@testing-library/react" "^13.4.0"
     "@testing-library/user-event" "^13.5.0"
     "@types/jest" "^27.5.2"
     "@types/node" "^16.18.23"
     "@types/react" "^18.0.32"
+    "@types/react-cookies" "^0.1.0"
     "@types/react-dom" "^18.0.11"
     antd "^5.3.3"
     axios "^1.3.4"
     react "^18.2.0"
+    react-cookies "^0.1.1"
     react-dom "^18.2.0"
     react-scripts "5.0.1"
     sass "^1.60.0"
@@ -2052,6 +2044,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/cookie@*":
+  version "0.5.1"
+  resolved "https://registry.npmjs.org/@types/cookie/-/cookie-0.5.1.tgz#b29aa1f91a59f35e29ff8f7cb24faf1a3a750554"
+  integrity sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==
+
 "@types/eslint-scope@^3.7.3":
   version "3.7.4"
   resolved "https://registry.npmmirror.com/@types/eslint-scope/-/eslint-scope-3.7.4.tgz#37fc1223f0786c39627068a12e94d6e6fc61de16"
@@ -2210,6 +2207,14 @@
   version "1.2.4"
   resolved "https://registry.npmmirror.com/@types/range-parser/-/range-parser-1.2.4.tgz#cd667bcfdd025213aafb7ca5915a932590acdcdc"
   integrity sha512-EEhsLsD6UsDM1yFhAvy0Cjr6VwmpMWqFBCb9w07wVugF7w9nfajxLuVmngTIpgS6svCnm6Vaw+MZhoDCKnOfsw==
+
+"@types/react-cookies@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.npmjs.org/@types/react-cookies/-/react-cookies-0.1.0.tgz#121182c7c5b72472769389f6d421d3fa45f2c57b"
+  integrity sha512-Py5k0iIVxwm0cQQSlUa1p5DJPf7EpXj/MMDs451U06HEseP/QvzdDAdE44x0hsxaelDPp8niVJWFDT3ajeRYPg==
+  dependencies:
+    "@types/cookie" "*"
+    "@types/express" "*"
 
 "@types/react-dom@^18.0.0", "@types/react-dom@^18.0.11":
   version "18.0.11"
@@ -3546,6 +3551,11 @@ cookie@0.5.0:
   version "0.5.0"
   resolved "https://registry.npmmirror.com/cookie/-/cookie-0.5.0.tgz#d1f5d71adec6558c58f389987c366aa47e994f8b"
   integrity sha512-YZ3GUyn/o8gfKJlnlX7g7xq4gyO6OSuhGPKaaGssGB2qgDUS0gPgtTvoyZLTt9Ab6dC4hfc9dV5arkvc/OCmrw==
+
+cookie@^0.3.1:
+  version "0.3.1"
+  resolved "https://registry.npmjs.org/cookie/-/cookie-0.3.1.tgz#e7e0a1f9ef43b4c8ba925c5c5a96e806d16873bb"
+  integrity sha512-+IJOX0OqlHCszo2mBUq+SrEbCj6w7Kpffqx60zYbPTFaO4+yYgRjHwcZNpWvaTylDHaV7PPmBHzSecZiMhtPgw==
 
 copy-to-clipboard@^3.2.0:
   version "3.3.3"
@@ -8186,6 +8196,14 @@ react-app-polyfill@^3.0.0:
     raf "^3.4.1"
     regenerator-runtime "^0.13.9"
     whatwg-fetch "^3.6.2"
+
+react-cookies@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.npmjs.org/react-cookies/-/react-cookies-0.1.1.tgz#2a35807e04f5a13f58ccd1a9fb66574506873c88"
+  integrity sha512-PP75kJ4vtoHuuTdq0TAD3RmlAv7vuDQh9fkC4oDlhntgs9vX1DmREomO0Y1mcQKR9nMZ6/zxoflaMJ3MAmF5KQ==
+  dependencies:
+    cookie "^0.3.1"
+    object-assign "^4.1.1"
 
 react-dev-utils@^12.0.1:
   version "12.0.1"
