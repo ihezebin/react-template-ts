@@ -2,7 +2,7 @@
 
 1. 安装Zustand库
 
-可以使用npm或yarn安装Zustand：
+使用npm或yarn安装Zustand：
 
 ```bash
 yarn add zustand

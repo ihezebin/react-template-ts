@@ -1,9 +1,9 @@
 import React from "react";
-import {useRoutes, Navigate} from "react-router-dom";
-import {Test, TestSub} from "../pages/test";
-import App from "../pages";
-import Forbidden from "../pages/errors/forbidden";
-import Nothing from "../pages/errors/nothing";
+import {Navigate, useRoutes} from "react-router-dom";
+import {Test, TestSub} from "../page/test";
+import App from "../page";
+import Forbidden from "../page/error/forbidden";
+import Nothing from "../page/error/nothing";
 
 //  authRoute 检查认证状态，如果已认证则返回原页面组件，否则返回做无权限处理
 const authRoute = (element: JSX.Element) => {
@@ -11,8 +11,8 @@ const authRoute = (element: JSX.Element) => {
     return authed ? element : <Navigate to={'/forbidden'} replace/>
 }
 
-
-const routers = [
+// https://reactrouter.com/en/6.21.1/route/route#index
+const Router = () => useRoutes([
     {path: '/test', element: <Test/>},
     {path: '/', element: <App/>, children: [
             {index: true, element:<Navigate to={'sub/test_id?name=korbin'}/>},
@@ -22,7 +22,5 @@ const routers = [
     },
     {path: '/forbidden', element: <Forbidden/>},
     {path: '*', element: <Nothing/>},
-]
-
-const Router = () => useRoutes(routers)
+])
 export default Router
