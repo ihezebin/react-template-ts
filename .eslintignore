@@ -1,0 +1,13 @@
+/public
+
+# dependencies
+node_modules
+# production
+dist
+
+.vscode
+
+.idea
+
+.eslintrc.js
+
