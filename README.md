@@ -15,7 +15,7 @@ npx pqc -t react [project-name]
 
 ### CSS
 
-CRA 的默认配置支持 SASS, 可直接在以 `.css` 结尾的文件中使用 SCSS 语法。若要使用 `.scss` 结尾的样式文件，续额外安装:
+CRA 的默认配置支持 SASS, 可直接在以 `.css` 结尾的文件中使用 SCSS 语法。若要使用 `.scss` 结尾的样式文件，需额外安装:
 
 ```
 yarn add sass
