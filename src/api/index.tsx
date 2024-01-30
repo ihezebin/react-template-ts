@@ -1,4 +1,4 @@
-import { newApi } from '@ihezebin/doraemon'
+import { newApi } from '@hezebin/doraemon'
 import { message, notification } from 'antd'
 
 export const api = newApi({

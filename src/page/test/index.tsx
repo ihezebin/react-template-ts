@@ -3,6 +3,7 @@ import useStore from '../../store'
 import { api } from '../../api'
 import { useLocation, useParams } from 'react-router-dom'
 import { Button } from 'antd'
+import style from './index.module.scss'
 
 const Test = () => {
   const { user, setUser, clearUser } = useStore()
@@ -28,7 +29,7 @@ const Test = () => {
   }
 
   return (
-    <div>
+    <div className={style.test}>
       <div>
         全局状态管理存储的用户信息： {user?.username}{' '}
         <Button onClick={() => setUser({ username: 'new_username' })}>改变用户名</Button>
