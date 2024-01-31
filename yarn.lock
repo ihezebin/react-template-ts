@@ -1363,10 +1363,10 @@
   resolved "https://registry.npmmirror.com/@eslint/js/-/js-8.56.0.tgz#ef20350fec605a7f7035a01764731b2de0f3782b"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
 
-"@hezebin/doraemon@^1.0.4":
-  version "1.0.4"
-  resolved "https://registry.npmmirror.com/@hezebin/doraemon/-/doraemon-1.0.4.tgz#795d355e6a9fbc7e333b0ef2016d246c6c71d659"
-  integrity sha512-8hJ4Onu9rzTobF2cZRcXicnjE+kQV55iKMu43ANgeHmHZqCg63zaegv4jVBYgJfUxD11hCrMtzrOFVIRa1TsQQ==
+"@hezebin/doraemon@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.npmjs.org/@hezebin/doraemon/-/doraemon-1.0.7.tgz#f846748ee9b28c8f6250cda90d80f8a39d4f1b29"
+  integrity sha512-ad2e+dn8CG3PBpkCy1qbo4gQA9o0Ll5KWqR3jjPQZIZMERP9pt0vGs7WwxQMzuph0wyMTldTkOv8C6LT76YTrw==
   dependencies:
     "@ant-design/icons" "^5.2.6"
     "@testing-library/jest-dom" "^5.17.0"
