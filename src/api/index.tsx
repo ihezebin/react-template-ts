@@ -1,8 +1,12 @@
-import { newApi } from '@hezebin/doraemon'
+import { newApi, usingToken } from '@hezebin/doraemon'
 import { message, notification } from 'antd'
 
 export const api = newApi({
-  baseURL: 'http://127.0.0.1:8080',
+  baseURL: 'http://127.0.0.1:8080/api',
+  withToken: () => {
+    const [token] = usingToken()
+    return token
+  },
   onError: (err) => {
     if (err.status) {
       // 有响应错误处理
