@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Navigate, useRoutes } from 'react-router-dom'
 import GlobalLayout from '../layout'
 import Forbidden from '../page/error/forbidden'
 import Nothing from '../page/error/nothing'
 import Test from '../page/test'
+import { unsubscribeStore } from '../store'
 
 //  authRoute 检查认证状态，如果已认证则返回原页面组件，否则返回做无权限处理
 const authRoute = (element: React.ReactElement) => {
@@ -12,8 +13,12 @@ const authRoute = (element: React.ReactElement) => {
 }
 
 // https://reactrouter.com/en/6.21.1/route/route#index
-const Router = () =>
-  useRoutes([
+const Router = () => {
+  useEffect(() => {
+    unsubscribeStore()
+  }, [])
+
+  return useRoutes([
     {
       path: '/',
       element: <GlobalLayout />,
@@ -26,4 +31,5 @@ const Router = () =>
     { path: '/forbidden', element: <Forbidden /> },
     { path: '*', element: <Nothing /> },
   ])
+}
 export default Router

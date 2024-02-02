@@ -16,17 +16,16 @@ type Store = {
 
 const localStorageKey = 'user'
 
-const useStore = create<Store>((set) => ({
+export const useStore = create<Store>((set) => ({
   user: JSON.parse(localStorage.getItem(localStorageKey) || 'null'),
   setUser: (user: User) => set((state) => ({ user: { ...state.user, ...user } })),
   clearUser: () => set(() => ({ user: null })),
 }))
 
-useStore.subscribe((state: Store) => {
-  if (state.user) {
+export const unsubscribeStore = useStore.subscribe((state: Store) => {
+  if (!state?.user) {
     localStorage.removeItem(localStorageKey)
+  } else {
+    localStorage.setItem(localStorageKey, JSON.stringify(state.user))
   }
-  localStorage.setItem(localStorageKey, JSON.stringify(state.user))
 })
-
-export default useStore
