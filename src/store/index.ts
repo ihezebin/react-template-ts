@@ -1,6 +1,6 @@
 import { create } from 'zustand'
 
-interface User {
+interface IUser {
   id?: string
   username?: string
   nick?: string
@@ -8,21 +8,23 @@ interface User {
   avatar?: string
 }
 
-type Store = {
-  user: User | null
-  setUser: (user: User) => void
+interface IStore {
+  user: IUser | null
+  setUser: (user: IUser) => void
   clearUser: () => void
 }
 
 const localStorageKey = 'user'
 
-export const useStore = create<Store>((set) => ({
+export const useStore = create<IStore>((set) => ({
   user: JSON.parse(localStorage.getItem(localStorageKey) || 'null'),
-  setUser: (user: User) => set((state) => ({ user: { ...state.user, ...user } })),
+  setUser: (user) => {
+    set((state) => ({ user: { ...state.user, ...user } }))
+  },
   clearUser: () => set(() => ({ user: null })),
 }))
 
-export const unsubscribeStore = useStore.subscribe((state: Store) => {
+export const unsubscribeStore = useStore.subscribe((state: IStore) => {
   if (!state?.user) {
     localStorage.removeItem(localStorageKey)
   } else {

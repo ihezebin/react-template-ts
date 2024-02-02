@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import useStore from '../../store'
+import { useStore } from '../../store'
 import { api } from '../../api'
 import { useLocation, useParams } from 'react-router-dom'
 import { Button } from 'antd'
@@ -30,9 +30,10 @@ const Test = () => {
 
   return (
     <div className={style.test}>
-      <div>
-        全局状态管理存储的用户信息： {user?.username}{' '}
+      <div style={{ display: 'flex' }}>
+        <div>全局状态管理存储的用户信息： {user?.username} </div>
         <Button onClick={() => setUser({ username: 'new_username' })}>改变用户名</Button>
+        <Button onClick={() => clearUser()}>清空用户</Button>
       </div>
       <br />
       <div>使用环境变量：{process.env.REACT_APP_DOMAIN}</div>

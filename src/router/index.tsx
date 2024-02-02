@@ -15,7 +15,9 @@ const authRoute = (element: React.ReactElement) => {
 // https://reactrouter.com/en/6.21.1/route/route#index
 const Router = () => {
   useEffect(() => {
-    unsubscribeStore()
+    return () => {
+      unsubscribeStore()
+    }
   }, [])
 
   return useRoutes([
