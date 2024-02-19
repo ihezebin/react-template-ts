@@ -47,7 +47,7 @@ const Test = () => {
         <Button
           onClick={() => {
             api
-              .get('http://localhost:8080/hello')
+              .get('/hello')
               .then((res) => {
                 console.log('resp', res)
               })
