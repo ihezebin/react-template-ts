@@ -1363,10 +1363,10 @@
   resolved "https://registry.npmmirror.com/@eslint/js/-/js-8.56.0.tgz"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
 
-"@hezebin/doraemon@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.npmjs.org/@hezebin/doraemon/-/doraemon-1.0.9.tgz"
-  integrity sha512-GSa9hC0pqyTRF8USKLsxwfGABD9fz7L7bH5jDmETY/uQ2O1t99d7VpmSc9sOxSpuD2o/dGOParA7KJHJG92Ftw==
+"@hezebin/doraemon@^1.0.12":
+  version "1.0.12"
+  resolved "https://registry.npmmirror.com/@hezebin/doraemon/-/doraemon-1.0.12.tgz#741a3e8c074afbac845d07b19fda62dfcf7e4a8a"
+  integrity sha512-bJ80Ub2o3tp4h8FQfZAOTkSPLnC3OptQBGRh5zAWqJi89e+IosvoZA3MgXap2SfZLV3qsuiJKRByPTv7DASlbQ==
   dependencies:
     "@ant-design/icons" "^5.2.6"
     "@testing-library/jest-dom" "^5.17.0"
@@ -1384,7 +1384,9 @@
     qs "^6.11.2"
     react "^18.2.0"
     react-cookies "^0.1.1"
+    react-cropper "^2.3.3"
     react-dom "^18.2.0"
+    react-easy-crop "^5.0.5"
     react-router-dom "^6.21.1"
     react-scripts "5.0.1"
     sass "^1.69.5"
@@ -3829,6 +3831,11 @@ cosmiconfig@^7.0.0:
     path-type "^4.0.0"
     yaml "^1.10.0"
 
+cropperjs@^1.5.13:
+  version "1.6.1"
+  resolved "https://registry.npmmirror.com/cropperjs/-/cropperjs-1.6.1.tgz#fd132021d93b824b1b0f2c2c3b763419fb792d89"
+  integrity sha512-F4wsi+XkDHCOMrHMYjrTEE4QBOrsHHN5/2VsVAaRq8P7E5z7xQpT75S+f/9WikmBEailas3+yo+6zPIomW+NOA==
+
 cross-spawn@^7.0.0, cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"
   resolved "https://registry.npmmirror.com/cross-spawn/-/cross-spawn-7.0.3.tgz"
@@ -5542,20 +5549,9 @@ http-proxy-agent@^4.0.1:
     agent-base "6"
     debug "4"
 
-http-proxy-middleware@^2.0.3:
+http-proxy-middleware@^2.0.3, http-proxy-middleware@^2.0.6:
   version "2.0.6"
   resolved "https://registry.npmmirror.com/http-proxy-middleware/-/http-proxy-middleware-2.0.6.tgz"
-  integrity sha512-ya/UeJ6HVBYxrgYotAZo1KvPWlgB48kUJLDePFeneHsVujFaW5WNj2NgWCAE//B1Dl02BIfYlpNgBy8Kf8Rjmw==
-  dependencies:
-    "@types/http-proxy" "^1.17.8"
-    http-proxy "^1.18.1"
-    is-glob "^4.0.1"
-    is-plain-obj "^3.0.0"
-    micromatch "^4.0.2"
-
-http-proxy-middleware@^2.0.6:
-  version "2.0.6"
-  resolved "https://registry.npmmirror.com/http-proxy-middleware/-/http-proxy-middleware-2.0.6.tgz#e1a4dd6979572c7ab5a4e4b55095d1f32a74963f"
   integrity sha512-ya/UeJ6HVBYxrgYotAZo1KvPWlgB48kUJLDePFeneHsVujFaW5WNj2NgWCAE//B1Dl02BIfYlpNgBy8Kf8Rjmw==
   dependencies:
     "@types/http-proxy" "^1.17.8"
@@ -7154,6 +7150,11 @@ normalize-url@^6.0.1:
   resolved "https://registry.npmmirror.com/normalize-url/-/normalize-url-6.1.0.tgz"
   integrity sha512-DlL+XwOy3NxAQ8xuC0okPgK46iuVNAK01YN7RueYBqqFeGsBjV9XmCAzAdgt+667bCl5kPh9EqKKDwnaPG1I7A==
 
+normalize-wheel@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.npmmirror.com/normalize-wheel/-/normalize-wheel-1.0.1.tgz#aec886affdb045070d856447df62ecf86146ec45"
+  integrity sha512-1OnlAPZ3zgrk8B91HyRj+eVv+kS5u+Z0SCsak6Xil/kmgEia50ga7zfkumayonZrImffAxPU/5WcyGhzetHNPA==
+
 npm-run-path@^4.0.1:
   version "4.0.1"
   resolved "https://registry.npmmirror.com/npm-run-path/-/npm-run-path-4.0.1.tgz"
@@ -8615,6 +8616,13 @@ react-cookies@^0.1.1:
     cookie "^0.3.1"
     object-assign "^4.1.1"
 
+react-cropper@^2.3.3:
+  version "2.3.3"
+  resolved "https://registry.npmmirror.com/react-cropper/-/react-cropper-2.3.3.tgz#aced0d045d9fd56168ba4d17287a40c287754dee"
+  integrity sha512-zghiEYkUb41kqtu+2jpX2Ntigf+Jj1dF9ew4lAobPzI2adaPE31z0p+5TcWngK6TvmWQUwK3lj4G+NDh1PDQ1w==
+  dependencies:
+    cropperjs "^1.5.13"
+
 react-dev-utils@^12.0.1:
   version "12.0.1"
   resolved "https://registry.npmmirror.com/react-dev-utils/-/react-dev-utils-12.0.1.tgz"
@@ -8652,6 +8660,14 @@ react-dom@^18.2.0:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
+
+react-easy-crop@^5.0.5:
+  version "5.0.5"
+  resolved "https://registry.npmmirror.com/react-easy-crop/-/react-easy-crop-5.0.5.tgz#275e68af91fe23d565953e225f378d02da4a400b"
+  integrity sha512-GH7Jw3898ytSaN4i4Oxi7j3BKzapZ2pVgnKIl+gFIUjA+NsDgdBSIpiBQUrPFIvHzSnPmz0kGCpX95X6NgsDzA==
+  dependencies:
+    normalize-wheel "^1.0.1"
+    tslib "2.0.1"
 
 react-error-overlay@^6.0.11:
   version "6.0.11"
@@ -9886,6 +9902,11 @@ tsconfig-paths@^3.15.0:
     json5 "^1.0.2"
     minimist "^1.2.6"
     strip-bom "^3.0.0"
+
+tslib@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.npmmirror.com/tslib/-/tslib-2.0.1.tgz#410eb0d113e5b6356490eec749603725b021b43e"
+  integrity sha512-SgIkNheinmEBgx1IUNirK0TUD4X9yjjBRTqqjggWCU3pUEqIk3/Uwl3yRixYKT6WjQuGiwDv4NomL3wqRCj+CQ==
 
 tslib@^1.8.1:
   version "1.14.1"

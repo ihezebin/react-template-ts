@@ -1,8 +1,20 @@
 import { createFromIconfontCN } from '@ant-design/icons'
 
 /**
- * Example: <IconFont type="icon-http" />
+ * Example: <IconFont type="http" />
  */
-export const IconFont = createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/c/font_4407981_b6k3ooswd0w.js',
-})
+interface IProps {
+  type: string
+}
+
+export const IconFont = ({ type }: IProps) => {
+  const typePrefix = 'icon-blog'
+
+  const IconFont = createFromIconfontCN({
+    scriptUrl: 'iconfont.js',
+  })
+
+  return <IconFont type={`${typePrefix}-${type}`} />
+}
+
+export default IconFont
