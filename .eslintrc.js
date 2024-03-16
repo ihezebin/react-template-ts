@@ -9,6 +9,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
     '@typescript-eslint/no-explicit-any': 'off',
+    'no-unused-vars': 'warn',
     'import/no-unresolved': 'error',
     'import/named': 'error',
     'import/order': [
@@ -19,5 +20,13 @@ module.exports = {
       },
     ],
     'unused-imports/no-unused-imports': 'error',
+  },
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        moduleDirectory: ['node_modules', 'src'],
+      },
+    },
   },
 }
