@@ -11,7 +11,7 @@ export const IconFont = ({ type }: IProps) => {
   const typePrefix = 'icon-blog'
 
   const IconFont = createFromIconfontCN({
-    scriptUrl: 'iconfont.js',
+    scriptUrl: '/iconfont.js',
   })
 
   return <IconFont type={`${typePrefix}-${type}`} />
