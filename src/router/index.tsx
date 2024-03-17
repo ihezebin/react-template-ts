@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { Navigate, useRoutes } from 'react-router-dom'
+
 import GlobalLayout from '../layout'
 import Forbidden from '../page/error/forbidden'
 import Nothing from '../page/error/nothing'

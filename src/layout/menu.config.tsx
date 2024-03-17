@@ -1,5 +1,5 @@
 import { ApiOutlined, AppstoreAddOutlined } from '@ant-design/icons'
-import { IMenuConfig } from '@hezebin/doraemon'
+import type { IMenuConfig } from '@hezebin/doraemon'
 
 export const menuConfig: IMenuConfig = {
   defaultCollapsedItems: ['layout_test_menu_item'],

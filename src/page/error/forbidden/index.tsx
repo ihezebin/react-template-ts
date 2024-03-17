@@ -1,6 +1,7 @@
-import style from './index.module.scss'
 import { Button, Result } from 'antd'
 import { useNavigate } from 'react-router-dom'
+
+import style from './index.module.scss'
 
 const Forbidden = () => {
   const navigate = useNavigate()

@@ -1,7 +1,8 @@
 import { Layout, usingToken } from '@hezebin/doraemon'
 import { Outlet } from 'react-router-dom'
-import { menuConfig } from './menu.config'
 import { useEffect } from 'react'
+
+import { menuConfig } from './menu.config'
 
 // const { AnimateCss } = Animate
 const GlobalLayout = () => {

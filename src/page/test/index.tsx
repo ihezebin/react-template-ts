@@ -1,8 +1,10 @@
 import React, { useEffect } from 'react'
-import { useStore } from '../../store'
-import { api } from '../../api'
 import { useLocation, useParams } from 'react-router-dom'
 import { Button } from 'antd'
+
+import { useStore } from '../../store'
+import { api } from '../../api'
+
 import style from './index.module.scss'
 
 const Test = () => {
