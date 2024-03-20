@@ -8,7 +8,7 @@ interface IProps extends React.ComponentProps<any> {
   type: string
 }
 
-export const IconFont = ({ type, ...restProps }: IProps) => {
+const IconFont = ({ type, ...restProps }: IProps) => {
   const typePrefix = 'icon-blog'
 
   const IconFont = createFromIconfontCN({
