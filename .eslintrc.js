@@ -14,7 +14,7 @@ module.exports = {
     // 'react',
     '@typescript-eslint',
     'import',
-    'unused-imports,
+    'unused-imports',
   ], // 启用 TypeScript 插件
   rules: {
     '@typescript-eslint/no-unused-vars': 'warn',
