@@ -1,21 +1,29 @@
-import { ApiOutlined, AppstoreAddOutlined } from '@ant-design/icons'
-import type { IMenuConfig } from '@hezebin/doraemon'
+import { ApiOutlined, AppstoreAddOutlined, KeyOutlined } from '@ant-design/icons'
+import type { LayoutMenuItem } from '@hezebin/doraemon'
 
-export const menuConfig: IMenuConfig = {
-  defaultCollapsedItems: ['layout_test_menu_item'],
-  collapsedTrigger: 'siderBottom',
-  items: [
-    { icon: <ApiOutlined />, path: 'api', label: 'API' },
-    {
-      icon: <AppstoreAddOutlined />,
-      path: 'component',
-      label: '组件',
-      children: [
-        { path: 'test', label: 'Test' },
-        { path: 'captcha', label: 'CaptchaInput 验证码' },
-        { path: 'icon', label: 'Icon 图标' },
-        { path: 'layout', label: 'Layout 布局' },
-      ],
-    },
-  ],
-}
+export const menuItemsConfig: LayoutMenuItem[] = [
+  { icon: <ApiOutlined />, key: 'api', label: 'API' },
+  { icon: <KeyOutlined />, key: 'token', label: 'usingToken' },
+  {
+    icon: <AppstoreAddOutlined />,
+    key: 'component',
+    label: '组件',
+    children: [
+      { key: 'test', label: 'Test' },
+      { key: 'captcha_input', label: 'CaptchaInput 验证码' },
+      { key: 'icon', label: 'Icon 图标' },
+      { key: 'layout', label: 'Layout 布局' },
+      { key: 'animate', label: 'Animate 动画效果' },
+      { key: 'upload', label: 'Upload 文件上传' },
+      // { key: 'code_preview', label: 'CodePreView 代码预览' },
+      { key: 'typewriter', label: 'Typewriter 打字机' },
+      { key: 'tag_cloud', label: 'TagCloud 标签云' },
+    ],
+  },
+  {
+    icon: <AppstoreAddOutlined />,
+    key: 'hook',
+    label: 'Hook',
+    children: [{ key: 'use_obj_state', label: 'useObjState' }],
+  },
+]

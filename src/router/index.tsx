@@ -27,12 +27,12 @@ const Router = () => {
       children: [
         { index: true, element: <Navigate to={'test/1234?a=1&b=2&c=3'} /> },
         { path: '/test/:id', element: <Test /> },
+        { path: 'need_auth', element: authRoute(<Test />) },
+        { path: 'forbidden', element: <Forbidden /> },
+        { path: 'nothing', element: <Nothing /> },
+        { path: '*', element: <Navigate to={'nothing'} replace /> },
       ],
     },
-    { path: 'need_auth', element: authRoute(<Test />) },
-    { path: 'forbidden', element: <Forbidden /> },
-    { path: 'nothing', element: <Nothing /> },
-    { path: '*', element: <Navigate to={'nothing'} replace /> },
   ])
 }
 export default Router
