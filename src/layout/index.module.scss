@@ -1,0 +1,14 @@
+@import "../asset/css/variable";
+
+.brand {
+  font-size: 20px;
+  color: var(--text-color);
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  gap: 20px;
+}

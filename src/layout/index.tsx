@@ -1,12 +1,19 @@
 import { Layout, usingToken } from '@hezebin/doraemon'
 import { Outlet, useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useEffect, useMemo, useState } from 'react'
+import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
+import { Switch } from 'antd'
 
-import { menuItemsConfig } from './menu.config'
+import { useStore } from '../store'
+
+import style from './index.module.scss'
+import { menuConfig } from './menu.config'
 
 // const { AnimateCss } = Animate
 const GlobalLayout = () => {
+  const [collapsed, setCollapsed] = useState<boolean>(false)
   const navigate = useNavigate()
+  const { themeDark, setThemeDark } = useStore()
 
   useEffect(() => {
     const [, setToken] = usingToken()
@@ -20,10 +27,27 @@ const GlobalLayout = () => {
 
   return (
     <Layout
-      // dark
+      dark={themeDark}
       height={'100vh'}
-      brand={<div style={{ color: 'gray', fontSize: 20 }}>React-Template-Ts</div>}
-      header={<></>}
+      collapsed={collapsed}
+      brand={
+        <div className={style.brand} onClick={() => navigate('/')}>
+          React-Template-Ts
+        </div>
+      }
+      header={
+        <div className={style.header}>
+          <div onClick={() => setCollapsed(!collapsed)}>
+            {collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+          </div>
+          <Switch
+            checkedChildren="🌛"
+            unCheckedChildren="🔆"
+            checked={themeDark}
+            onClick={() => setThemeDark(!themeDark)}
+          />
+        </div>
+      }
       footer={
         <div
           style={{
@@ -36,11 +60,9 @@ const GlobalLayout = () => {
           @copyright Doraemon
         </div>
       }
-      menu={{
-        onClick: handleMenuClick,
-        selectedKeys: location?.pathname.split('/').reverse(),
-        items: menuItemsConfig,
-      }}>
+      onClick={handleMenuClick}
+      selectedKeys={location?.pathname.split('/').reverse()}
+      menu={useMemo(() => menuConfig, [])}>
       <Outlet />
     </Layout>
   )

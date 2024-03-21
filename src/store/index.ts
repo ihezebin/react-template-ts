@@ -9,9 +9,8 @@ interface User {
 }
 
 interface IStore {
-  theme: string
-  setThemeDark: () => void
-  setThemeLight: () => void
+  themeDark: boolean
+  setThemeDark: (dark: boolean) => void
   user: User | null
   setUser: (user: User) => void
   clearUser: () => void
@@ -19,22 +18,20 @@ interface IStore {
 
 const LOCALSTORAGE_KEY_USER = 'user'
 const LOCALSTORAGE_KEY_THEME = 'theme'
+const THEME_LIGHT = 'light'
+const THEME_DARK = 'dark'
+const THEME_DEFAULT = THEME_LIGHT
 
 export const useStore = create<IStore>((set) => ({
-  theme: (() => {
-    const theme = localStorage.getItem(LOCALSTORAGE_KEY_THEME) || ''
+  themeDark: (() => {
+    const theme = localStorage.getItem(LOCALSTORAGE_KEY_THEME) || THEME_DEFAULT
+    const dark = theme === THEME_DARK
     document.documentElement.setAttribute(LOCALSTORAGE_KEY_THEME, theme)
-    return theme
+    return dark
   })(),
-  setThemeDark: () => {
-    const theme = 'dark'
-    set((state) => ({ ...state, theme: theme }))
-    document.documentElement.setAttribute(LOCALSTORAGE_KEY_THEME, theme)
-  },
-  setThemeLight: () => {
-    const theme = 'light'
-    set((state) => ({ ...state, theme: theme }))
-    document.documentElement.setAttribute(LOCALSTORAGE_KEY_THEME, theme)
+  setThemeDark: (dark: boolean) => {
+    set((state) => ({ ...state, themeDark: dark }))
+    document.documentElement.setAttribute(LOCALSTORAGE_KEY_THEME, dark ? THEME_DARK : THEME_LIGHT)
   },
   user: JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY_USER) || 'null'),
   setUser: (user) => {
@@ -50,9 +47,9 @@ export const unsubscribeStore = useStore.subscribe((state: IStore) => {
     localStorage.setItem(LOCALSTORAGE_KEY_USER, JSON.stringify(state.user))
   }
 
-  if (!state?.theme) {
-    localStorage.removeItem(LOCALSTORAGE_KEY_THEME)
-  } else if (state?.theme) {
-    localStorage.setItem(LOCALSTORAGE_KEY_THEME, state.theme)
+  if (state?.themeDark) {
+    localStorage.setItem(LOCALSTORAGE_KEY_THEME, THEME_DARK)
+  } else {
+    localStorage.setItem(LOCALSTORAGE_KEY_THEME, THEME_LIGHT)
   }
 })
