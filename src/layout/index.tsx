@@ -5,6 +5,7 @@ import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 import { Switch } from 'antd'
 
 import { useStore } from '../store'
+import Logo from '../asset/logo/logo.png'
 
 import style from './index.module.scss'
 import { menuConfig } from './menu.config'
@@ -32,6 +33,7 @@ const GlobalLayout = () => {
       collapsed={collapsed}
       brand={
         <div className={style.brand} onClick={() => navigate('/')}>
+          <img src={Logo} alt="logo" />
           React-Template-Ts
         </div>
       }

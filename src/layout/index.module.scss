@@ -4,6 +4,12 @@
   font-size: 20px;
   color: var(--text-color);
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  img {
+    height: 28px;
+    margin-right: 8px;
+  }
 }
 
 .header {
