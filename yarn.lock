@@ -1363,10 +1363,10 @@
   resolved "https://registry.npmmirror.com/@eslint/js/-/js-8.57.0.tgz#a5417ae8427873f1dd08b70b3574b453e67b5f7f"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
-"@hezebin/doraemon@^1.0.38":
-  version "1.0.38"
-  resolved "https://registry.npmjs.org/@hezebin/doraemon/-/doraemon-1.0.38.tgz#e3b4a32638aca99ea0401bead941e04418f7e076"
-  integrity sha512-veTD3FGx26MxpV0QW4i4wfiTOSPtZ8rOx7xqmkCGKqkTuJJNS/6EX+AWggOchm9sgPuUgTEFFHWo5ZO5J8uxAg==
+"@hezebin/doraemon@^1.0.45":
+  version "1.0.45"
+  resolved "https://registry.npmjs.org/@hezebin/doraemon/-/doraemon-1.0.45.tgz#6cc020aa60a8143eb053fc2189784fecb008dd29"
+  integrity sha512-En74IqxBEyhY0V5TASm9MRBkoDuoHBcLt85cnUqTC9CXIDWLrawJSyPleWQRY8CjNuSMD1FcGoKBUKzuiC7YIA==
   dependencies:
     "@ant-design/icons" "^5.2.6"
     "@testing-library/jest-dom" "^5.17.0"
@@ -1379,7 +1379,7 @@
     "@types/react-dom" "^18.2.18"
     animate.css "^4.1.1"
     antd "^5.12.5"
-    axios "^1.6.3"
+    axios "^1.7.2"
     classnames "^2.5.1"
     dayjs "^1.11.10"
     qs "^6.11.2"
@@ -3196,10 +3196,10 @@ axe-core@=4.7.0:
   resolved "https://registry.npmmirror.com/axe-core/-/axe-core-4.7.0.tgz#34ba5a48a8b564f67e103f0aa5768d76e15bbbbf"
   integrity sha512-M0JtH+hlOL5pLQwHOLNYZaXuhqmvS8oExsqB1SBYgA4Dk7u/xx+YdGHXaK5pyUfed5mYXdlYiphWq3G8cRi5JQ==
 
-axios@^1.6.3:
-  version "1.6.8"
-  resolved "https://registry.npmmirror.com/axios/-/axios-1.6.8.tgz#66d294951f5d988a00e87a0ffb955316a619ea66"
-  integrity sha512-v/ZHtJDU39mDpyBoFVkETcd/uNdxrWRrg3bKpOKzXFA6Bvqopts6ALSMU3y6ijYxbw2B+wPrIv46egTzJXCLGQ==
+axios@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.npmjs.org/axios/-/axios-1.7.2.tgz#b625db8a7051fbea61c35a3cbb3a1daa7b9c7621"
+  integrity sha512-2A8QhOMrbomlDuiLeK9XibIBzuHeRcqqNOHp0Cyp5EoJ1IFDh+XZH3A6BkXtv0K4gFGCI0Y4BM7B1wOEi0Rmgw==
   dependencies:
     follow-redirects "^1.15.6"
     form-data "^4.0.0"
