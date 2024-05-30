@@ -13,14 +13,18 @@ export const api = newApi({
   },
   onResponse: (res) => {
     if (res?.code !== 0 && res?.code !== 11) {
-      message.error(res?.message)
+      message.error(res?.message).then()
     }
     return res
   },
   onError: (err) => {
     if (err.status) {
       // 有响应错误处理
-      message.error(err?.message)
+      if (err.status === 401) {
+        const [_, __, clearToken] = usingToken()
+        clearToken()
+      }
+      message.error(err?.message).then()
     } else {
       // 无响应错误处理
       notification.error({
