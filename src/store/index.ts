@@ -1,11 +1,12 @@
 import { create } from 'zustand'
 
 interface User {
-  id?: string
-  username?: string
-  nick?: string
-  email?: string
+  id: string
+  username: string
+  phone?: string
+  email: string
   avatar?: string
+  password_strength: number
 }
 
 interface IStore {
