@@ -1,4 +1,4 @@
-import { ENV_PROD, newApi, usingToken } from '@hezebin/doraemon'
+import { ENV_PROD, getLocalItem, KEY_TOKEN, newApi, setLocalItem } from '@hezebin/doraemon'
 import { message, notification } from 'antd'
 
 const baseURL = '/api'
@@ -8,8 +8,7 @@ export const api = newApi({
   baseURL: baseURL,
   timeout: timeout,
   withToken: () => {
-    const [token] = usingToken()
-    return token
+    return getLocalItem(KEY_TOKEN)
   },
   onResponse: (res) => {
     if (res?.code !== 0 && res?.code !== 11) {
@@ -21,8 +20,7 @@ export const api = newApi({
     if (err.status) {
       // 有响应错误处理
       if (err.status === 401) {
-        const [_, __, clearToken] = usingToken()
-        clearToken()
+        setLocalItem(KEY_TOKEN)
       }
       message.error(err?.message).then()
     } else {

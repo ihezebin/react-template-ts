@@ -1,4 +1,4 @@
-import { Layout, usingToken } from '@hezebin/doraemon'
+import { getLocalItem, KEY_TOKEN, Layout } from '@hezebin/doraemon'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { useEffect, useMemo, useState } from 'react'
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
@@ -17,8 +17,7 @@ const GlobalLayout = () => {
   const { themeDark, setThemeDark } = useStore()
 
   useEffect(() => {
-    const [, setToken] = usingToken()
-    setToken('default token')
+    console.log(getLocalItem(KEY_TOKEN))
   }, [])
 
   const handleMenuClick = (keys: string[]) => {

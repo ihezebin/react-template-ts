@@ -1363,10 +1363,10 @@
   resolved "https://registry.npmmirror.com/@eslint/js/-/js-8.57.0.tgz#a5417ae8427873f1dd08b70b3574b453e67b5f7f"
   integrity sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==
 
-"@hezebin/doraemon@^1.0.45":
-  version "1.0.45"
-  resolved "https://registry.npmjs.org/@hezebin/doraemon/-/doraemon-1.0.45.tgz#6cc020aa60a8143eb053fc2189784fecb008dd29"
-  integrity sha512-En74IqxBEyhY0V5TASm9MRBkoDuoHBcLt85cnUqTC9CXIDWLrawJSyPleWQRY8CjNuSMD1FcGoKBUKzuiC7YIA==
+"@hezebin/doraemon@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/@hezebin/doraemon/-/doraemon-1.1.0.tgz#cca2b3790a2a59acc763a60ba6ae8c4c29912e34"
+  integrity sha512-NCrGJvFhqkp8j2udPjyIiAMgr6fyAGgwCwdM4vhBZCNk712IhhdinJ3MPLKDV13nhAZvH8P7Q5Ka+Tuv5GkqKA==
   dependencies:
     "@ant-design/icons" "^5.2.6"
     "@testing-library/jest-dom" "^5.17.0"
@@ -9472,6 +9472,11 @@ signal-exit@^4.0.1:
   version "4.1.0"
   resolved "https://registry.npmmirror.com/signal-exit/-/signal-exit-4.1.0.tgz#952188c1cbd546070e2dd20d0f41c0ae0530cb04"
   integrity sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==
+
+simple-zustand-devtools@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/simple-zustand-devtools/-/simple-zustand-devtools-1.1.0.tgz#bb080b30c9930d2997f33881f63d47405226fd7f"
+  integrity sha512-Axfcfr9L3YL3kto7aschCQLY2VUlXXMnIVtaTe9Y0qWbNmPsX/y7KsNprmxBZoB0pww5ZGs1u/ohcrvQ3tE6jA==
 
 sisteransi@^1.0.5:
   version "1.0.5"

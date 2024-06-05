@@ -13,6 +13,8 @@ const Test = () => {
     setUser({
       username: 'test_username',
       id: '123',
+      password_strength: 5,
+      email: 'test_email',
     })
 
     return () => {
@@ -34,7 +36,12 @@ const Test = () => {
     <div className={style.test}>
       <div style={{ display: 'flex' }}>
         <div>全局状态管理存储的用户信息： {user?.username} </div>
-        <Button onClick={() => setUser({ username: 'new_username' })}>改变用户名</Button>
+        <Button
+          onClick={() =>
+            setUser({ id: 'xxx', username: 'new_username', password_strength: 5, email: 'xxx' })
+          }>
+          改变用户名
+        </Button>
         <Button onClick={() => clearUser()}>清空用户</Button>
       </div>
       <br />
