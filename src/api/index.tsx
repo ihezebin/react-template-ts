@@ -1,7 +1,7 @@
 import { ENV_PROD, newApi, usingToken } from '@hezebin/doraemon'
 import { message, notification } from 'antd'
 
-const baseURL = process.env.NODE_ENV === ENV_PROD ? '/api' : 'http://127.0.0.1:8080'
+const baseURL = '/api'
 const timeout = process.env.NODE_ENV === ENV_PROD ? 5000 : 0
 
 export const api = newApi({
