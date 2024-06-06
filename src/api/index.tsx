@@ -21,8 +21,9 @@ export const api = newApi({
       // 有响应错误处理
       if (err.status === 401) {
         setLocalItem(KEY_TOKEN)
+      } else {
+        message.error(err?.message).then()
       }
-      message.error(err?.message).then()
     } else {
       // 无响应错误处理
       notification.error({
