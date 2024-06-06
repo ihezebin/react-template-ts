@@ -39,7 +39,7 @@ export const useStore = create<IStore>((set) => ({
     set((state) => ({ ...state, themeDark: dark }))
     document.documentElement.setAttribute(KEY_THEME, dark ? THEME_DARK : THEME_LIGHT)
   },
-  user: JSON.parse(getLocalItem(KEY_USER) || 'null'),
+  user: getLocalItem(KEY_USER),
   setUser: (user) => {
     set((state) => ({ ...state, user: { ...state.user, ...user } }))
   },
