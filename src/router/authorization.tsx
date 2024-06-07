@@ -1,4 +1,3 @@
-import { ENV_DEV, getLocalItem, KEY_TOKEN } from '@hezebin/doraemon'
 import { ReactElement, useEffect, useState } from 'react'
 import { message, Spin } from 'antd'
 import { useNavigate } from 'react-router-dom'
@@ -12,18 +11,11 @@ interface IProps {
 
 export const RequireAuth = ({ children }: IProps) => {
   const [loading, setLoading] = useState<boolean>(true)
-  const { user, clearUser } = useStore()
+  const { user, clearUser, token } = useStore()
   const navigate = useNavigate()
 
   useEffect(() => {
-    const token = getLocalItem(KEY_TOKEN)
     if (!token) {
-      // 开发环境返回
-      if (process.env.NODE_ENV === ENV_DEV) {
-        setLoading(false)
-        return
-      }
-
       handleUnAuthorized(clearUser)
       return
     }
@@ -33,8 +25,7 @@ export const RequireAuth = ({ children }: IProps) => {
     }
 
     if (user?.username !== 'hezebin') {
-      message.error(`当前登录账号[${user?.username}]无权限`).then()
-      navigate('/forbidden')
+      message.error(`当前登录账号[${user?.username}]无权限`).then(() => navigate('/forbidden'))
       return
     }
 
