@@ -36,7 +36,7 @@ export const RequireAuth = ({ children }: IProps) => {
     <Spin
       style={{ maxHeight: 'initial', height: '100vh' }}
       size={'large'}
-      tip={'登录认证中'}
+      tip={'认证中...'}
       spinning={loading}>
       {children}
     </Spin>
