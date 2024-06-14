@@ -12,7 +12,7 @@ import { routes } from './routes'
 // https://reactrouter.com/en/6.21.1/route/route#index
 const Router = () => {
   const navigate = useNavigate()
-  const { setUser, clearUser, token, setToken } = useStore()
+  const { setUser, clearUser, token, setToken, clearToken } = useStore()
   const [authing, setAuthing] = useState<boolean>(true)
 
   useEffect(() => {
@@ -38,6 +38,8 @@ const Router = () => {
           }
           if (status !== 200 || code !== 0) {
             console.error('Authorization Failed:', msg)
+            clearUser()
+            clearToken()
             return
           }
           if (code === 0 && data?.user) {

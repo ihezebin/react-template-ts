@@ -7,10 +7,10 @@ html, body {
   font-size: var(--font-size);
 
   color: var(--text-color);
-  font-family: var(--font-family);
   z-index: 0;
 
   * {
+    font-family: var(--font-family);
     box-sizing: border-box;
   }
 
