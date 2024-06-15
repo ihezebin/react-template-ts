@@ -65,13 +65,7 @@ const Router = () => {
 
   return (
     <Spin
-      style={{
-        maxHeight: 'initial',
-        height: '100vh',
-        display: 'flex',
-        alignItems: 'center',
-        justifyContent: 'center',
-      }}
+      style={{ maxHeight: 'initial', height: '100vh' }}
       spinning={authing}
       tip={'加载账号数据...'}
       size={'large'}>
