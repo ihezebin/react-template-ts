@@ -61,6 +61,8 @@ const Router = () => {
     }
   }, [token])
 
+  const routesElement = useRoutes(routes)
+
   return (
     <Spin
       style={{
@@ -73,7 +75,7 @@ const Router = () => {
       spinning={authing}
       tip={'加载账号数据...'}
       size={'large'}>
-      {!authing && useRoutes(routes)}
+      {!authing && routesElement}
     </Spin>
   )
 }
