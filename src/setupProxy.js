@@ -5,10 +5,10 @@ const { createProxyMiddleware } = require('http-proxy-middleware')
 module.exports = function (app) {
   app.use(
     createProxyMiddleware('/api/user', {
-      target: 'https://www.hezebin.com',
+      target: 'http://www.hezebin.com',
       changeOrigin: true,
       pathRewrite: {
-        '^/api': '',
+        // '^/api': '',
       },
     }),
   )
