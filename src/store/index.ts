@@ -2,20 +2,13 @@ import { create } from 'zustand'
 import { mountStoreDevtool } from 'simple-zustand-devtools'
 import { ENV_DEV, getLocalItem, KEY_TOKEN, setLocalItem } from '@hezebin/doraemon'
 
-interface User {
-  id: string
-  username: string
-  phone?: string
-  email: string
-  avatar?: string
-  password_strength: number
-}
+import { IUser } from '../model'
 
 interface IStore {
   themeDark: boolean
   setThemeDark: (dark: boolean) => void
-  user: User | null
-  setUser: (user: User) => void
+  user: IUser | null
+  setUser: (user: IUser) => void
   clearUser: () => void
   token: string | null
   setToken: (token: string) => void
