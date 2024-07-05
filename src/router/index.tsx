@@ -66,7 +66,7 @@ const Router = () => {
   return (
     <Spin
       style={{ maxHeight: 'initial', height: '100vh' }}
-      spinning={authing}
+      spinning={true}
       tip={'加载账号数据...'}
       size={'large'}>
       {!authing && routesElement}

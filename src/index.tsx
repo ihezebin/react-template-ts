@@ -1,7 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
-import { message } from 'antd'
+import { ConfigProvider, message } from 'antd'
+import zhCN from 'antd/locale/zh_CN'
 
 import Router from './router'
 
@@ -24,7 +25,9 @@ message.config({
 })
 
 root.render(
-  <BrowserRouter>
-    <Router />
-  </BrowserRouter>,
+  <ConfigProvider locale={zhCN}>
+    <BrowserRouter>
+      <Router />
+    </BrowserRouter>
+  </ConfigProvider>,
 )
