@@ -4,7 +4,7 @@ React TypeScript 的模板项目，包含了常用的组件、工具、配置等
 ## 快速创建项目
 
 ```bash
-npx pcq -t react [project-name]
+npx pcq -t cra-ts [project-name]
 ```
 
 ## 组件介绍
