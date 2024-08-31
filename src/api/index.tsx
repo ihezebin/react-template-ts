@@ -2,7 +2,7 @@ import { ENV_PROD, getLocalItem, KEY_TOKEN, newApi, setLocalItem } from '@hezebi
 import { message, notification } from 'antd'
 
 const baseURL = '/api'
-const timeout = process.env.NODE_ENV === ENV_PROD ? 5000 : 0
+const timeout = process.env.NODE_ENV === ENV_PROD ? 10000 : 0
 
 export const api = newApi({
   baseURL: baseURL,

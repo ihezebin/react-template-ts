@@ -16,6 +16,9 @@ module.exports = function (app) {
     createProxyMiddleware('/api', {
       target: 'http://localhost:8080',
       changeOrigin: true,
+      headers: {
+        'h-uid': '669a48c520220772211dcee8',
+      },
       pathRewrite: {
         '^/api': '',
       },
