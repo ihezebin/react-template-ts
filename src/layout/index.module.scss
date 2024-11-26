@@ -1,4 +1,4 @@
-@import "../asset/css/variable";
+@import "../assets/css/variable";
 
 .brand {
   font-size: 20px;
@@ -13,6 +13,7 @@
 }
 
 .header {
+  padding-right: 20px;
   display: flex;
   justify-content: flex-end;
   cursor: pointer;

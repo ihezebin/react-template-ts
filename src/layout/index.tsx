@@ -5,7 +5,7 @@ import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 import { Switch } from 'antd'
 
 import { useStore } from '../store'
-import Logo from '../asset/logo/logo.png'
+import Logo from '../assets/logo/logo.png'
 
 import style from './index.module.scss'
 import { menuConfig } from './menu.config'

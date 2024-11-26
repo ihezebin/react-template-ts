@@ -3,9 +3,9 @@ import { Navigate } from 'react-router-dom'
 import React from 'react'
 
 import GlobalLayout from '../layout'
-import Test from '../page/test'
-import Forbidden from '../page/error/forbidden'
-import Nothing from '../page/error/nothing'
+import Test from '../page/Test'
+import Forbidden from '../page/Error/forbidden'
+import Nothing from '../page/Error/nothing'
 
 export const routes: RouteObject[] = [
   {
